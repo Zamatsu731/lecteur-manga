@@ -4,7 +4,7 @@ Application Android personnelle pour lire des mangas et des comics, avec une int
 
 ## Télécharger
 
-L'APK **3.8** est disponible dans [releases/Lecteur-Manga-3.8.apk](releases/Lecteur-Manga-3.8.apk).
+L'APK **3.9** est disponible dans [releases/Lecteur-Manga-3.9.apk](releases/Lecteur-Manga-3.9.apk).
 
 Android 8.0 ou supérieur. Pour remplacer une ancienne version fournie dans la conversation, installer cet APK par-dessus, sans désinstaller, pour conserver les données.
 
@@ -16,7 +16,8 @@ Android 8.0 ou supérieur. Pour remplacer une ancienne version fournie dans la c
 - Favoris, historique et reprise à la page enregistrée.
 - Lecture verticale ou page par page ; thème clair ou sombre.
 - Zoom natif à deux doigts, jusqu'à 5×.
-- Téléchargement par chapitre, progression, pause et reprise.
+- Téléchargement par chapitre en arrière-plan et écran éteint, notification de progression avec action pause.
+- Statut Lu/non lu, filtres des téléchargements et suppression groupée des chapitres lus avec confirmation. Le statut Lu se choisit dans Téléchargements ou à la fin du lecteur.
 - Lecture hors connexion des chapitres entièrement téléchargés et gestion de l'espace occupé.
 - Interface de lecture sans publicité et sans compte obligatoire.
 
@@ -46,7 +47,7 @@ La clé de signature utilisée pour l'APK fourni n'est pas dans ce dépôt. Une 
 
 Les catalogues dépendent de sites tiers : leur disponibilité, leurs protections et leur présentation peuvent changer. Les données ne sont pas hébergées par cette application.
 
-Le téléchargement doit se faire avec l'application ouverte. Une interruption peut être reprise à la prochaine ouverture. Les chapitres sont enregistrés dans l'espace privé de l'application ; désinstaller celle-ci les efface.
+Les transferts sont gérés par un service Android dataSync indépendant du lecteur, avec verrou CPU temporaire et notification. Ils continuent quand le lecteur est fermé normalement. Un arrêt forcé, une restriction du système, la limite Android de durée ou une perte réseau peuvent les interrompre : utiliser Reprendre pour conserver les pages déjà reçues. La file n’est pas relancée automatiquement après un arrêt du processus. Les chapitres sont enregistrés dans l'espace privé de l'application ; désinstaller celle-ci les efface.
 
 La compilation et la signature de l'APK ont été vérifiées. Des tests de parsing, de classement, de pagination et de navigation simulée passent. L'ensemble des lecteurs et le zoom doivent encore être vérifiés sur un appareil Android réel. Le catalogue SushiScan n'a pas pu être validé directement depuis l'environnement de développement.
 
