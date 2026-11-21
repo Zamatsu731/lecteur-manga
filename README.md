@@ -4,7 +4,7 @@ Application Android personnelle pour lire des mangas et des comics, avec une int
 
 ## Télécharger
 
-L'APK **3.9** est disponible dans [releases/Lecteur-Manga-3.9.apk](releases/Lecteur-Manga-3.9.apk).
+L'APK **4.0** est disponible dans [releases/Lecteur-Manga-4.0.apk](releases/Lecteur-Manga-4.0.apk).
 
 Android 8.0 ou supérieur. Pour remplacer une ancienne version fournie dans la conversation, installer cet APK par-dessus, sans désinstaller, pour conserver les données.
 
@@ -15,7 +15,7 @@ Android 8.0 ou supérieur. Pour remplacer une ancienne version fournie dans la c
 - Catalogue de mangas et de webtoons, catalogue complémentaire de mangas et de comics.
 - Favoris, historique et reprise à la page enregistrée.
 - Lecture verticale ou page par page ; thème clair ou sombre.
-- Zoom natif à deux doigts, jusqu'à 5×.
+- Zoom à deux doigts de 1× à 5× limité aux images des scans ; double toucher pour agrandir/rétablir. Le catalogue, les menus et les boutons ne zooment pas.
 - Téléchargement par chapitre en arrière-plan et écran éteint, notification de progression avec action pause.
 - Statut Lu/non lu, filtres des téléchargements et suppression groupée des chapitres lus avec confirmation. Le statut Lu se choisit dans Téléchargements ou à la fin du lecteur.
 - Lecture hors connexion des chapitres entièrement téléchargés et gestion de l'espace occupé.
