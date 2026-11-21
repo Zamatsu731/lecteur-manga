@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'fr.manuel.anime'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'fr.manuel.anime'
+        minSdk 26
+        targetSdk 35
+        versionCode 11
+        versionName '3.7'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+}
+dependencies { implementation 'org.jsoup:jsoup:1.18.3' }
