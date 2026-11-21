@@ -4,13 +4,14 @@ Application Android personnelle pour lire des mangas et des comics, avec une int
 
 ## Télécharger
 
-L'APK **3.7** est disponible dans [releases/Lecteur-Manga-3.7.apk](releases/Lecteur-Manga-3.7.apk).
+L'APK **3.8** est disponible dans [releases/Lecteur-Manga-3.8.apk](releases/Lecteur-Manga-3.8.apk).
 
 Android 8.0 ou supérieur. Pour remplacer une ancienne version fournie dans la conversation, installer cet APK par-dessus, sans désinstaller, pour conserver les données.
 
 ## Fonctions
 
 - Recherche, catégories et tri des titres.
+- Onglet Catégories : recherche sans accents, sélection jusqu’à 5 genres, genres récents et listes propres à chaque catalogue.
 - Catalogue de mangas et de webtoons, catalogue complémentaire de mangas et de comics.
 - Favoris, historique et reprise à la page enregistrée.
 - Lecture verticale ou page par page ; thème clair ou sombre.
@@ -50,3 +51,14 @@ Le téléchargement doit se faire avec l'application ouverte. Une interruption p
 La compilation et la signature de l'APK ont été vérifiées. Des tests de parsing, de classement, de pagination et de navigation simulée passent. L'ensemble des lecteurs et le zoom doivent encore être vérifiés sur un appareil Android réel. Le catalogue SushiScan n'a pas pu être validé directement depuis l'environnement de développement.
 
 Projet non officiel, sans affiliation avec les sites référencés. Aucun chapitre ni image de lecture n'est inclus dans le dépôt.
+
+## Tester l’interface
+
+Avec Node.js et npm installés :
+
+```sh
+npm install
+npm run test:ui
+```
+
+Ces tests simulent les catalogues : ils vérifient la navigation et les filtres, sans valider la disponibilité des sites tiers.

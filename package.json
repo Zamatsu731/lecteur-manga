@@ -1,0 +1,11 @@
+{
+  "name": "lecteur-manga-ui-tests",
+  "private": true,
+  "version": "3.8.0",
+  "scripts": {
+    "test:ui": "node tests/categories-ui.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
