@@ -24,5 +24,5 @@ final class Catalog {
   if(editions.length()==0)for(Element script:d.select("script")){String code=script.data().replaceAll("(?s)/\\*.*?\\*/","").replaceAll("(?m)^\\s*//.*$","");Matcher m=Pattern.compile("panneauScan\\(\\s*([\"'])(.*?)\\1\\s*,\\s*([\"'])(.*?)\\3\\s*\\)").matcher(code);while(m.find()){String p=new URI(url).resolve(m.group(4)).getPath();if(editionPath(p)&&seen.add(p))editions.put(new JSONObject().put("title",m.group(2)).put("path",p));}}
   for(Element e:d.select(".oe-genres .genre-pill"))genres.put(e.text());Element desc=d.selectFirst("#synopsisText");return new JSONObject().put("editions",editions).put("genres",genres).put("description",desc==null?"":desc.text());
  }
- static String readerTitle(String html)throws Exception{Element t=Jsoup.parse(html).getElementById("titreOeuvre");if(t==null||t.text().isEmpty())throw new Exception("Lecture indisponible pour cette édition.");return t.text();}
+ static String readerTitle(String html)throws Exception{Document d=Jsoup.parse(html);d.outputSettings().prettyPrint(false);Element t=d.getElementById("titreOeuvre");if(t==null||t.text().isEmpty())throw new Exception("Lecture indisponible pour cette édition.");return t.html();}
 }

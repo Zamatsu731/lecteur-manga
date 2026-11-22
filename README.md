@@ -4,7 +4,7 @@ Application Android personnelle pour lire des mangas et des comics, avec une int
 
 ## Télécharger
 
-L'APK **4.0** est disponible dans [releases/Lecteur-Manga-4.0.apk](releases/Lecteur-Manga-4.0.apk).
+L'APK **4.1** est disponible dans [releases/Lecteur-Manga-4.1.apk](releases/Lecteur-Manga-4.1.apk).
 
 Android 8.0 ou supérieur. Pour remplacer une ancienne version fournie dans la conversation, installer cet APK par-dessus, sans désinstaller, pour conserver les données.
 
@@ -63,3 +63,7 @@ npm run test:ui
 ```
 
 Ces tests simulent les catalogues : ils vérifient la navigation et les filtres, sans valider la disponibilité des sites tiers.
+
+## Correction 4.1
+
+Conserve l’identifiant exact de chaque édition, y compris ses espaces significatifs : One Piece noir et blanc utilise « One Piece » suivi d’un espace. Le titre affiché reste propre ; la liste, les images et les téléchargements emploient l’identifiant source exact. Les anciennes métadonnées sont renouvelées, et une réponse d’erreur ne peut plus être enregistrée comme liste de chapitres. Test de régression : `tests/OnePieceEditionTest.java`.

@@ -5,7 +5,7 @@ final class ChapterDownloader {
  interface Cancellation {boolean cancelled();}
  interface Fetcher {void image(String url,File dest)throws Exception;}
  static void run(OfflineStore store,JSONObject meta,Cancellation cancel,Fetcher fetch)throws Exception{
-  String id=meta.getString("id"),title=meta.getString("title"),chapter=meta.getString("chapter");int total=meta.getInt("pages");
+  String id=meta.getString("id"),title=meta.optString("sourceTitle",meta.getString("title")),chapter=meta.getString("chapter");int total=meta.getInt("pages");
   for(int i=1;i<=total;i++){
    if(cancel.cancelled()||Thread.currentThread().isInterrupted())throw new InterruptedIOException();
    if(store.hasPage(id,i))continue;
